@@ -19,8 +19,12 @@ public class BuildsTest {
 
     @Test
     public void searchForBuildRecord() {
-       String buildId = "5a31697f2a9636515a6bc7d8";
-        Response buildResponse = (Response) new BuildsClient().findByBuildId(buildId);
-        System.out.println(buildResponse.as(Builds.class).getId());
+       String buildId = "12xyz345id";
+        BuildRequest buildRequest = new BuildBuilder().withId(buildId).build();
+        BuildsClient buildsClient = new BuildsClient();
+        buildsClient.createBuild(buildRequest);
+        Response buildResponse = new BuildsClient().findByBuildId(buildId);
+        Assert.assertEquals(buildId, buildResponse.as(Builds.class).getId());
     }
 }
+

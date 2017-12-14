@@ -16,6 +16,11 @@ public class BuildBuilder {
         buildRequest.setScenarioSuccessRate("0.0");
     }
 
+    public BuildBuilder withId(String id) {
+        buildRequest.setId(id);
+        return this;
+    }
+
     public BuildBuilder withBuildStartTime(Date buildStartTime) {
         buildRequest.setBuildStartTime(buildStartTime);
         return this;

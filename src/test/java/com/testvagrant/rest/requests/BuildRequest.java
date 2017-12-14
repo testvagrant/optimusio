@@ -4,10 +4,19 @@ import java.util.Date;
 
 public class BuildRequest {
 
+    private String id;
     private Date buildStartTime;
     private Date buildEndTime;
     private int scenarioCount;
     private String scenarioSuccessRate;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Date getBuildStartTime() {
         return buildStartTime;
