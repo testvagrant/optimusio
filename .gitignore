@@ -1,0 +1,6 @@
+
+.gitignore
+.idea/sonarlint/
+build
+out
+.idea
