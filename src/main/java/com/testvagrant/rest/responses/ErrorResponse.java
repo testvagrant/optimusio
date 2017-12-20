@@ -1,4 +1,4 @@
-package com.testvagrant.rest.resources;
+package com.testvagrant.rest.responses;
 
 public class ErrorResponse {
 

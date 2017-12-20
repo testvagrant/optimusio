@@ -1,7 +1,6 @@
-package com.testvagrant.rest.responses.builds;
+package com.testvagrant.rest.responses;
 
 import com.testvagrant.rest.models.Builds;
-import com.testvagrant.rest.resources.ErrorResponse;
 
 public class BuildResponse {
 

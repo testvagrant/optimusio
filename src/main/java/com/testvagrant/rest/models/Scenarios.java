@@ -1,6 +1,6 @@
 package com.testvagrant.rest.models;
 
-import org.bson.types.Binary;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,7 +10,7 @@ import java.util.Date;
 @Document
 public class Scenarios {
 
-    @Id private String id;
+    @Id @JsonIgnore private String id;
 
     private String scenarioName;
     private String deviceUdid;
@@ -18,12 +18,12 @@ public class Scenarios {
     private Date startTime;
     private ObjectId buildId;
     private String status;
-    private Boolean completed;
-    private Date endTime;
-    private int timeTaken;
-    private String scenarioTimeline;
-    private String steps;
-    private Binary failedOnScreen;
+    private Boolean completed = false;
+    private Date endTime = new Date();
+    private Integer timeTaken = 0;
+    private String scenarioTimeline = "";
+    private String steps = "";
+    private byte[] failedOnScreen = new byte[]{};
 
     public String getScenarioName() {
         return scenarioName;
@@ -89,11 +89,11 @@ public class Scenarios {
         this.endTime = endTime;
     }
 
-    public int getTimeTaken() {
+    public Integer getTimeTaken() {
         return timeTaken;
     }
 
-    public void setTimeTaken(int timeTaken) {
+    public void setTimeTaken(Integer timeTaken) {
         this.timeTaken = timeTaken;
     }
 
@@ -113,11 +113,19 @@ public class Scenarios {
         this.steps = steps;
     }
 
-    public Binary getFailedOnScreen() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public byte[] getFailedOnScreen() {
         return failedOnScreen;
     }
 
-    public void setFailedOnScreen(Binary failedOnScreen) {
+    public void setFailedOnScreen(byte[] failedOnScreen) {
         this.failedOnScreen = failedOnScreen;
     }
 }

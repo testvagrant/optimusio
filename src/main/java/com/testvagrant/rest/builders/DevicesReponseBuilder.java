@@ -1,8 +1,7 @@
-package com.testvagrant.rest.builders.devices;
+package com.testvagrant.rest.builders;
 
-import com.testvagrant.rest.builders.ErrorResponseBuilder;
-import com.testvagrant.rest.resources.ErrorResponse;
-import com.testvagrant.rest.responses.devices.DevicesResponse;
+import com.testvagrant.rest.responses.ErrorResponse;
+import com.testvagrant.rest.responses.DevicesResponse;
 
 import java.util.ArrayList;
 

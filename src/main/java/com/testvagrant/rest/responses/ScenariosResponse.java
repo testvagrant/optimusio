@@ -1,18 +1,20 @@
-package com.testvagrant.rest.responses.devices;
+package com.testvagrant.rest.responses;
 
-import com.testvagrant.rest.resources.ErrorResponse;
+import com.testvagrant.rest.models.Scenarios;
 
-public class DevicesResponse<T> {
-    private T devices;
+import java.util.List;
+
+public class ScenariosResponse {
+    private List<Scenarios> scenarios;
     private ErrorResponse error;
     private boolean success;
 
-    public T getDevices() {
-        return devices;
+    public List<Scenarios> getScenarios() {
+        return scenarios;
     }
 
-    public void setDevices(T devices) {
-        this.devices = devices;
+    public void setScenarios(List<Scenarios> scenarios) {
+        this.scenarios = scenarios;
     }
 
     public ErrorResponse getError() {

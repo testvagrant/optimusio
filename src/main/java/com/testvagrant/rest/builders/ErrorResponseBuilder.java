@@ -1,6 +1,6 @@
 package com.testvagrant.rest.builders;
 
-import com.testvagrant.rest.resources.ErrorResponse;
+import com.testvagrant.rest.responses.ErrorResponse;
 
 public class ErrorResponseBuilder {
 

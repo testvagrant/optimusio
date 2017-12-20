@@ -11,7 +11,7 @@ public class BuildsClient {
     public Response createBuild(BuildRequest buildRequest) {
         Response buildResponse = given().header("Content-Type", "application/json")
                 .body(buildRequest)
-                .post(BUILDS);
+                .post(BUILDS+"/create");
         return buildResponse;
     }
 

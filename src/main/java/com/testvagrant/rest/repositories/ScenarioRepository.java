@@ -14,4 +14,5 @@ public interface ScenarioRepository extends MongoRepository<Scenarios,String> {
     List<Scenarios> findByBuildId(@Param("buildId")ObjectId buildId);
 
     Scenarios findByBuildIdAndScenarioName(@Param("buildId") ObjectId buildId, @Param("name") String scenarioName);
+
 }

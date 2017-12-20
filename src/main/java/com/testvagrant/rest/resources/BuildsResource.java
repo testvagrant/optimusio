@@ -1,9 +1,9 @@
-package com.testvagrant.rest.resources.builds;
+package com.testvagrant.rest.resources;
 
-import com.testvagrant.rest.helpers.builds.BuildHelper;
+import com.testvagrant.rest.helpers.BuildHelper;
 import com.testvagrant.rest.models.Builds;
 import com.testvagrant.rest.repositories.BuildRepository;
-import com.testvagrant.rest.responses.builds.BuildsResponse;
+import com.testvagrant.rest.responses.BuildsResponse;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;

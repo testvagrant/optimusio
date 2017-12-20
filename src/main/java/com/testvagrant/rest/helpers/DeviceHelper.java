@@ -1,9 +1,9 @@
-package com.testvagrant.rest.helpers.builds;
+package com.testvagrant.rest.helpers;
 
 import com.testvagrant.rest.builders.ErrorResponseBuilder;
-import com.testvagrant.rest.builders.devices.DevicesReponseBuilder;
+import com.testvagrant.rest.builders.DevicesReponseBuilder;
 import com.testvagrant.rest.models.Devices;
-import com.testvagrant.rest.responses.devices.DevicesResponse;
+import com.testvagrant.rest.responses.DevicesResponse;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;

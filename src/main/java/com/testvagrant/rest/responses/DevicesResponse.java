@@ -1,18 +1,16 @@
-package com.testvagrant.rest.responses.builds;
+package com.testvagrant.rest.responses;
 
-import com.testvagrant.rest.resources.ErrorResponse;
-
-public class BuildsResponse<T> {
-    private T builds;
+public class DevicesResponse<T> {
+    private T devices;
     private ErrorResponse error;
     private boolean success;
 
-    public T getBuilds() {
-        return builds;
+    public T getDevices() {
+        return devices;
     }
 
-    public void setBuilds(T builds) {
-        this.builds = builds;
+    public void setDevices(T devices) {
+        this.devices = devices;
     }
 
     public ErrorResponse getError() {

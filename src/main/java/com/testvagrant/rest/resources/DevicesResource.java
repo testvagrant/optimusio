@@ -1,9 +1,9 @@
-package com.testvagrant.rest.resources.builds;
+package com.testvagrant.rest.resources;
 
-import com.testvagrant.rest.helpers.builds.DeviceHelper;
+import com.testvagrant.rest.helpers.DeviceHelper;
 import com.testvagrant.rest.models.Devices;
 import com.testvagrant.rest.repositories.DeviceRepository;
-import com.testvagrant.rest.responses.devices.DevicesResponse;
+import com.testvagrant.rest.responses.DevicesResponse;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -28,6 +28,20 @@ public class DevicesResource {
         this.mongoTemplate = mongoTemplate;
     }
 
+    @GetMapping("/{id}")
+    public DevicesResponse getAllDevices(@PathVariable ObjectId id, HttpServletResponse response) {
+        List<Devices> devices = deviceRepository.findAllByBuildId(id);
+        return deviceHelper.createDeviceResponse(devices,"Cannot find devices",response);
+    }
+
+    @GetMapping("/getDevice/{id}/{udid:.+}")
+    public DevicesResponse getDevice(@PathVariable ObjectId id, @PathVariable String udid, HttpServletResponse response) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("buildId").is(id).and("udid").is(udid));
+        Devices devices = mongoTemplate.findOne(query,Devices.class);
+        return deviceHelper.createDevicedResponse(devices,String.format("Cannot find device with udid %s",udid),response);
+    }
+
     @PostMapping("/{id}")
     public DevicesResponse storeDevices(@PathVariable String id, @RequestBody List<Devices> devicesList, HttpServletResponse response) {
         devicesList.forEach(devices -> devices.setBuildId(new ObjectId(id)));
@@ -35,21 +49,22 @@ public class DevicesResource {
         return deviceHelper.createDeviceResponse(save,"Cannot save devices", response);
     }
 
-    @PutMapping("/{id}/screenshot")
+    @PutMapping("/screenshot/{id}")
     public Devices storeScreenshot(@PathVariable ObjectId id, @RequestBody Devices devices, HttpServletResponse response) {
         Query query = new Query();
         query.addCriteria(Criteria.where("udid").is(devices.getUdid()).and("buildId").is(id));
         return mongoTemplate.findAndModify(query, Update.update("screenshot",devices.getScreenshot()),Devices.class);
     }
 
-    @PutMapping("/{id}/{udid}/releaseDevice")
-    public Devices releaseDevice(@PathVariable ObjectId id, @PathVariable String udid, HttpServletResponse response) {
+    @PutMapping("/releaseDevice/{id}/{udid}")
+    public DevicesResponse releaseDevice(@PathVariable ObjectId id, @PathVariable String udid, HttpServletResponse response) {
         Query query = new Query();
         query.addCriteria(Criteria.where("udid").is(udid).and("buildId").is(id));
-        return mongoTemplate.findAndModify(query, Update.update("status","Available"),Devices.class);
+        Devices releasedDevice = mongoTemplate.findAndModify(query, Update.update("status","Available"),Devices.class);
+        return deviceHelper.createDevicedResponse(releasedDevice,"Device cannot be released",response);
     }
 
-    @PutMapping("/{id}/engageDevice")
+    @PutMapping("/engageDevice/{id}")
     public DevicesResponse engageDevice(@PathVariable ObjectId id, @RequestBody Devices devices, HttpServletResponse response) {
         Query query = getDeviceQuery(devices);
         query.addCriteria(Criteria.where("buildId").is(id).and("status").is("Available"));
@@ -71,12 +86,12 @@ public class DevicesResource {
             query.addCriteria(Criteria.where("deviceName").is(devices.getDeviceName()));
         }
 
-        if(!StringUtils.isEmpty(devices.getDeviceType())) {
-            query.addCriteria(Criteria.where("deviceType").is(devices.getDeviceType()));
+        if(!StringUtils.isEmpty(devices.getRunsOn())) {
+            query.addCriteria(Criteria.where("deviceType").is(devices.getRunsOn()));
         }
 
-        if(!StringUtils.isEmpty(devices.getOsVersion())) {
-            query.addCriteria(Criteria.where("osVersion").is(devices.getOsVersion()));
+        if(!StringUtils.isEmpty(devices.getPlatformVersion())) {
+            query.addCriteria(Criteria.where("osVersion").is(devices.getPlatformVersion()));
         }
         return query;
     }

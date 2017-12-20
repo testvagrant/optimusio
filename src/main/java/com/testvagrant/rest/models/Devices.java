@@ -4,18 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
-public class Devices<T> {
+public class Devices {
 
     @JsonIgnore
     @Id private String id;
     private String platform;
     private String status;
     private String deviceName;
-    private String osVersion;
+    private String platformVersion;
     private String udid;
-    private String deviceType;
+    private String runsOn;
     @JsonIgnore private ObjectId buildId;
-    @JsonIgnore private byte[] screenshot;
+    @JsonIgnore private byte[] screenshot = new byte[]{};
 
 
     public String getId() {
@@ -50,12 +50,12 @@ public class Devices<T> {
         this.deviceName = deviceName;
     }
 
-    public String getOsVersion() {
-        return osVersion;
+    public String getPlatformVersion() {
+        return platformVersion;
     }
 
-    public void setOsVersion(String osVersion) {
-        this.osVersion = osVersion;
+    public void setPlatformVersion(String platformVersion) {
+        this.platformVersion = platformVersion;
     }
 
     public String getUdid() {
@@ -66,12 +66,12 @@ public class Devices<T> {
         this.udid = udid;
     }
 
-    public String getDeviceType() {
-        return deviceType;
+    public String getRunsOn() {
+        return runsOn;
     }
 
-    public void setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
+    public void setRunsOn(String runsOn) {
+        this.runsOn = runsOn;
     }
 
     public ObjectId getBuildId() {

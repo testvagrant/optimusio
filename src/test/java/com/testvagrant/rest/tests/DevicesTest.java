@@ -1,7 +1,7 @@
 package com.testvagrant.rest.tests;
 
 import com.testvagrant.rest.models.Devices;
-import com.testvagrant.rest.responses.devices.DevicesResponse;
+import com.testvagrant.rest.responses.DevicesResponse;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -33,5 +33,28 @@ public class DevicesTest {
         System.out.println(post.asString());
         DevicesResponse response = post.as(DevicesResponse.class);
     }
+
+
+    @Test
+    public void getAllDevices() {
+        Response post = given()
+                .header("Content-Type", "application/json")
+                .pathParam("id", "5a379f854108aaab2f92cd8a")
+                .get("http://localhost:8080/v1/devices/{id}");
+        System.out.println(post.asString());
+        DevicesResponse response = post.as(DevicesResponse.class);
+    }
+
+    @Test
+    public void getDevices() {
+        Response post = given()
+                .header("Content-Type", "application/json")
+                .pathParam("id", "5a3898fecebe507d11397378")
+                .pathParam("udid", "4200935feed2a28f")
+                .get("http://localhost:8080/v1/devices/getDevice/{id}/{udid}");
+        System.out.println(post.asString());
+        DevicesResponse response = post.as(DevicesResponse.class);
+    }
+
 
 }
