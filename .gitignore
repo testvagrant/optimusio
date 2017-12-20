@@ -1,6 +1,4 @@
-
-.idea/sonarlint/
-build/
-out/
-.idea/
 .gradle
+.idea
+build
+out

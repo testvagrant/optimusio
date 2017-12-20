@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.List;
 
 @Document
 public class Scenarios {
@@ -13,6 +14,8 @@ public class Scenarios {
     @Id @JsonIgnore private String id;
 
     private String scenarioName;
+    private Integer dataRowNumber = 0;
+    private List<Integer> locationLines;
     private String deviceUdid;
     private String[] tags;
     private Date startTime;
@@ -31,6 +34,22 @@ public class Scenarios {
 
     public void setScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
+    }
+
+    public Integer getDataRowNumber() {
+        return dataRowNumber;
+    }
+
+    public void setDataRowNumber(Integer dataRowNumber) {
+        this.dataRowNumber = dataRowNumber;
+    }
+
+    public List<Integer> getLocationLines() {
+        return locationLines;
+    }
+
+    public void setLocationLines(List<Integer> locationLines) {
+        this.locationLines = locationLines;
     }
 
     public String getDeviceUdid() {
