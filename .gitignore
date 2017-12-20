@@ -1,4 +1,5 @@
-.gradle
+.gradle/
 .idea
+.gradle/4.3.1/fileHashes/fileHashes.lock
 build
 out
