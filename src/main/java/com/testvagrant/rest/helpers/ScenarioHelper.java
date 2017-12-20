@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ScenarioHelper {
 
-    public ScenariosResponse createScenaioResponse(List<Scenarios> scenarios, String error, HttpServletResponse response) {
+    public ScenariosResponse createScenarioResponse(List<Scenarios> scenarios, String error, HttpServletResponse response) {
         ScenariosResponseBuilder scenariosResponseBuilder = new ScenariosResponseBuilder();
         ErrorResponseBuilder errorResponseBuilder = new ErrorResponseBuilder();
         if(scenarios.size()==0 || scenarios.get(0)==null) {
@@ -28,6 +28,6 @@ public class ScenarioHelper {
     public ScenariosResponse createScenarioResponse(Scenarios scenario, String error, HttpServletResponse response) {
       List<Scenarios> scenarios = new ArrayList<>();
       scenarios.add(scenario);
-      return createScenaioResponse(scenarios,error,response);
+      return createScenarioResponse(scenarios,error,response);
     }
 }

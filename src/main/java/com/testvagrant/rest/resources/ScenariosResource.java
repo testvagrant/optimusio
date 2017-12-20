@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/scenarios")
@@ -70,6 +71,12 @@ public class ScenariosResource {
         Query query = getUniqueScenarioQuery(id,scenarioName);
         Scenarios scenario = mongoTemplate.findAndModify(query, Update.update("scenarioTimeline", scenarioTimeline), Scenarios.class);
         return scenarioHelper.createScenarioResponse(scenario,"Cannot update scenario timeline", response);
+    }
+
+    @GetMapping("/{id}/{scenarioName}")
+    public ScenariosResponse getScenario(@PathVariable ObjectId id, @PathVariable String scenarioName, HttpServletResponse servletResponse) {
+        List<Scenarios> byBuildIdAndScenarioName = scenarioRepository.findAllByBuildIdAndScenarioName(id, scenarioName);
+        return scenarioHelper.createScenarioResponse(byBuildIdAndScenarioName,"Cannot find scenario with name "+scenarioName, servletResponse);
     }
 
     private Query getUniqueScenarioQuery(@PathVariable ObjectId id, @RequestBody Scenarios scenarios) {
