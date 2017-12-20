@@ -56,7 +56,7 @@ public class DevicesResource {
         return mongoTemplate.findAndModify(query, Update.update("screenshot",devices.getScreenshot()),Devices.class);
     }
 
-    @PutMapping("/releaseDevice/{id}/{udid}")
+    @PutMapping("/releaseDevice/{id}/{udid:.+}")
     public DevicesResponse releaseDevice(@PathVariable ObjectId id, @PathVariable String udid, HttpServletResponse response) {
         Query query = new Query();
         query.addCriteria(Criteria.where("udid").is(udid).and("buildId").is(id));

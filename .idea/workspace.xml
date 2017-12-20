@@ -2,54 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6e5219c-df90-4625-b943-57ebb24f0ad1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/ScenariosResponseBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/config/GridFsConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/helpers/ScenarioHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/models/ScenarioGridFs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/ScenariosResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/ScenariosResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/builders/builds/BuildResponseBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/builders/builds/BuildsResponseBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/helpers/builds/BuildHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/resources/ErrorResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/resources/builds/BuildsResource.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/responses/builds/BuildResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/responses/builds/BuildsResponse.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/builds/BuildResponseBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/BuildResponseBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/builds/BuildsResponseBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/BuildsResponseBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/devices/DevicesReponseBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/DevicesReponseBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/helpers/builds/BuildHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/helpers/BuildHelper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/helpers/builds/DeviceHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/helpers/DeviceHelper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/ErrorResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/ErrorResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/builds/BuildsResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/BuildsResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/builds/DevicesResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/DevicesResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/builds/BuildResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/BuildResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/builds/BuildsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/BuildsResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/devices/DevicesResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/responses/DevicesResponse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileContent/fileContent.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/builders/ErrorResponseBuilder.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/builders/ErrorResponseBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/models/Scenarios.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/testvagrant/rest/models/Scenarios.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/testvagrant/rest/models/Scenarios.class" afterPath="$PROJECT_DIR$/out/production/classes/com/testvagrant/rest/models/Scenarios.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/clients/BuildsClient.class" afterPath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/clients/BuildsClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/endpoints/BaseEndPoint.class" afterPath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/endpoints/BaseEndPoint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/endpoints/BuildsEndPoints.class" afterPath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/endpoints/BuildsEndPoints.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/tests/BuildsTest.class" afterPath="$PROJECT_DIR$/out/test/classes/com/testvagrant/rest/tests/BuildsTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/ErrorResponseBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/builders/ErrorResponseBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/models/Devices.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/models/Devices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/models/Scenarios.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/models/Scenarios.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/repositories/DeviceRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/repositories/DeviceRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/repositories/ScenarioRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/repositories/ScenarioRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/clients/BuildsClient.java" afterPath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/clients/BuildsClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/endpoints/BaseEndPoint.java" afterPath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/endpoints/BaseEndPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/tests/BuildsTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/tests/BuildsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/tests/DevicesTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/testvagrant/rest/tests/DevicesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/DevicesResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/DevicesResource.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -96,8 +56,8 @@
       <file leaf-file-name="DevicesResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/DevicesResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="-285">
+              <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1707,8 +1667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/testvagrant/rest/resources/DevicesResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="-285">
+          <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
